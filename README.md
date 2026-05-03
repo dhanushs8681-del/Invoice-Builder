@@ -12,7 +12,6 @@
 
 **A responsive, blazingly fast invoice generator that turns raw data into professional, print-ready invoices with a single click.**
 
-[✨ Live Demo](#-live-demo) · [🚀 Quick Start](#-quick-start) · [📸 Screenshots](#-screenshots) · [🧩 Tech Stack](#-tech-stack) · [🚢 Deploy](#-deployment)
 
 </div>
 
@@ -112,17 +111,6 @@ npm run build     # Production build → ./dist
 npm run preview   # Preview the production build locally
 ```
 
----
-
-## 📸 Screenshots
-
-> *Add screenshots here once deployed — drop them in a `/screenshots` folder and reference them below.*
-
-<div align="center">
-  <em>Desktop view — split editor with live preview</em><br/><br/>
-  <em>Mobile view — toggle between Edit and Preview</em><br/><br/>
-  <em>Generated PDF — clean, professional, print-ready</em>
-</div>
 
 ---
 
@@ -177,87 +165,14 @@ The invoice preview lives inside a `forwardRef`'d component. When you hit **Down
 ### Print mode
 Tailwind's `print:` utilities combined with a global `.no-print` class hide all UI chrome (sticky nav, buttons, form pane) during print, leaving just the invoice.
 
----
 
-## 🚢 Deployment
 
-### Netlify (recommended)
-
-The repo ships with a ready-to-go `netlify.toml`. Just:
-
-1. Push to GitHub (already done 😉)
-2. Log into [Netlify](https://www.netlify.com) → **Add new site** → **Import from Git**
-3. Select this repo → hit **Deploy**
-
-That's it. Netlify picks up `npm run build` and publishes the `dist` folder automatically.
-
-### Render
-
-1. Go to [Render](https://www.render.com) → **New** → **Static Site**
-2. Connect this repo
-3. Set:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-4. Deploy 🚀
-
-### Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Vercel auto-detects Vite. Accept the defaults.
-
----
-
-## 🌟 Live Demo
-
-🔗 **[Try it live →](#)** *(deploy your app and drop the URL here)*
-
----
-
-## 🛣️ Roadmap
-
-Ideas for future iterations:
-- [ ] Save invoices to localStorage (draft history)
-- [ ] Multiple invoice templates (minimal, classic, modern)
-- [ ] Logo upload for the "From" block
-- [ ] Recurring invoice support
-- [ ] CSV/JSON import for bulk line items
-- [ ] Dark mode
-- [ ] Internationalization (i18n)
-- [ ] Email invoice directly from the app (via mailto or SMTP)
-
-Got ideas? [Open an issue](https://github.com/Lokesh-web16/Invoice-Builder/issues) or send a PR!
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'feat: add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
 
 ---
 
 ## 📄 License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more info.
-
----
-
-## 📬 Contact
-
-**Lokesh Naikar**
-
-- 📧 Email: [lokeshnaikar7@gmail.com](mailto:lokeshnaikar7@gmail.com)
-- 🐙 GitHub: [@Lokesh-web16](https://github.com/Lokesh-web16)
-- 🔗 Project: [Invoice-Builder](https://github.com/Lokesh-web16/Invoice-Builder)
 
 ---
 
