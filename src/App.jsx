@@ -75,7 +75,7 @@ export default function App() {
     <div className="min-h-screen mesh-bg">
       <Header />
 
-      <main className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <main className="app-main max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {/* Action bar */}
         <div className="no-print sticky top-4 z-30 mb-6 animate-slide-down">
           <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-soft">
@@ -149,10 +149,10 @@ export default function App() {
           </div>
 
           <div
-            className={`animate-slide-up ${mobileView === 'preview' ? 'block' : 'hidden lg:block'}`}
+            className={`print-area animate-slide-up ${mobileView === 'preview' ? 'block' : 'hidden lg:block'}`}
             style={{ animationDelay: '80ms' }}
           >
-            <div className="lg:sticky lg:top-28">
+            <div className="preview-wrap lg:sticky lg:top-28">
               <InvoicePreview ref={previewRef} invoice={invoice} totals={totals} />
             </div>
           </div>

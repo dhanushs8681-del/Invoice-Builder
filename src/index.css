@@ -108,11 +108,85 @@
 
 /* Print / PDF styling */
 @media print {
-  .no-print {
-    display: none !important;
+  @page {
+    size: letter portrait;
+    margin: 0.4in;
   }
+
+  html,
   body {
     background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Force backgrounds, gradients, and colors to print */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  /* Kill the mesh backdrop so it doesn't eat ink */
+  .mesh-bg {
+    background: white !important;
+    background-image: none !important;
+  }
+
+  /* Reset app chrome for print */
+  .app-main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Force the preview column to always show full width on print */
+  .print-area {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    position: static !important;
+    grid-column: 1 / -1 !important;
+  }
+
+  .print-area .preview-wrap {
+    position: static !important;
+    top: auto !important;
+  }
+
+  .grid {
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  /* Clean up preview card for print */
+  .pdf-capture {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Bulletproof fallback: force dark header even if gradient is stripped */
+  .preview-header {
+    background-color: #0f172a !important;
+  }
+  .preview-header * {
+    color: #ffffff !important;
+  }
+  .preview-header .text-slate-300 {
+    color: #cbd5e1 !important;
   }
 }
 
@@ -120,4 +194,6 @@
 .pdf-capture {
   background: white;
   color: #0f172a;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }

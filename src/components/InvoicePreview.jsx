@@ -12,7 +12,7 @@ const InvoicePreview = forwardRef(function InvoicePreview({ invoice, totals }, r
         className="pdf-capture relative bg-white rounded-2xl shadow-card overflow-hidden border border-slate-200/70"
       >
         {/* Header band */}
-        <div className="relative px-8 pt-8 pb-6 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 text-white overflow-hidden">
+        <div className="preview-header relative px-8 pt-8 pb-6 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 text-white overflow-hidden">
           <div
             className="absolute inset-0 opacity-30"
             style={{
